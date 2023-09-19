@@ -6,7 +6,119 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-    background-color: rgb(52, 112, 108);
-    color: white;
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
 }
+
+body {
+    background-color: rgb(52, 101, 112);
+    color: rgb(236, 187, 159);
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg {
+    background-color: rgb(180, 91, 39);
+    border-radius: 2px;
+}
+
+section,
+footer,
+header {
+     padding: 2rem;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+ 
+header li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 0.7rem;
+    color: rgb(236, 187, 159);
+    display: block;
+}
+
+.btn {
+    border: none;
+    border-radius: 7px;
+    box-shadow: none;
+    padding: 0.7rem 0.7rem;
+    background-color: rgb(180, 91, 39);
+    color: rgb(236, 187, 159);
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.mobile {
+    display: none;
+    background-color: transparent;
+    box-shadow: none;
+    border: none; 
+    color: rgb(236, 187, 159);
+    cursor: pointer;
+}
+
+@media (max-width:500px) {
+    body {
+        background-color: rgb(52, 101, 112);
+    }
+    nav ul {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    .btn {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.85rem;
+    }
+    ul.responsive {
+        display: block;
+        background-color: rgb(180, 91, 39);
+        color: rgb(236, 187, 159);
+        position: absolute;
+        margin: 1.5rem 0;
+        border-radius: 10px;
+        left: 0;
+        top: 70px;
+        width: 100%;
+    }
+    ul.responsive li {
+        display: block;
+        margin: 1rem;
+    }
+    ul.responsive li a:hover {
+        background-color: rgb(236, 187, 159);
+        color: rgb(180, 91, 39);
+        border-radius: 5px;
+        width: 40%;
+    }
+}
+
+
+
