@@ -27,7 +27,7 @@ header {
 
 .bg {
     background-color: rgb(180, 91, 39);
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 section,
@@ -38,6 +38,14 @@ header {
 
 section {
     scroll-margin-top: 100px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    margin-bottom: 20px;
 }
 
 p {
@@ -55,6 +63,15 @@ ul li a {
     display: block;
 }
 
+ul li a:hover {
+    text-decoration: underline orange;
+    text-underline-offset: 0.5em;
+}
+
+#modal {
+    padding: 2rem;
+}
+
 .btn {
     border: none;
     border-radius: 7px;
@@ -66,11 +83,21 @@ ul li a {
     font-size: inherit;
 }
 
+.btn:hover {
+    background-color: rgb(236, 187, 159);
+    color: rgb(180, 91, 39);
+    cursor: pointer;
+}
+
 #backToTop {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
     display: none;
+    cursor: pointer;
+}
+
+#dontclick {
     cursor: pointer;
 }
 
@@ -83,7 +110,52 @@ ul li a {
     cursor: pointer;
 }
 
-@media (max-width:500px) {
+.modal {
+    background-color: rgb(52, 101, 112, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.visible {
+    display: flex;
+}
+
+.modal-content {
+    background-color: rgb(237, 194, 171);
+    color: rgb(180, 91, 39);
+    margin: 3rem;
+    padding: 3rem;
+    border-radius: 10px;
+    max-width: 600px;
+    position: relative;
+}
+
+#xButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    border-radius: 7px;
+    box-shadow: none;
+    padding: 0.7rem 0.7rem;
+    background-color: rgb(180, 91, 39);
+    color: rgb(236, 187, 159);
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+#xButton:hover {
+    background-color: rgb(217, 156, 124);
+}
+
+@media (max-width:700px) {
     body {
         background-color: rgb(52, 101, 112);
     }

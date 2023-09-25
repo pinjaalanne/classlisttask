@@ -3,12 +3,15 @@ const mobButton = document.querySelector('.mobile')
 const nav = document.querySelector('nav ul')
 const menuItems = document.querySelectorAll('nav ul li a')
 const header = document.querySelector('header')
+const modButton = document.querySelector('#dontclick')
+const modal = document.querySelector('.modal')
+const closingButton = document.querySelector('.xmodal')
 
 // browser onscroll event trigger
 window.onscroll = function () {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
         backButton.style.display = "block";
       } else {
         backButton.style.display = "none";
@@ -36,5 +39,11 @@ const mobMenu = () => {
     }
 }
 
+const modalBox = () => {
+    modal.classList.toggle('visible')
+}
+
 backButton.addEventListener('click', getToTop)
 mobButton.addEventListener('click', mobMenu)
+modButton.addEventListener('click', modalBox)
+closingButton.addEventListener('click', modalBox)
